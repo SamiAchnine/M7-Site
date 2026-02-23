@@ -44,6 +44,7 @@ function createLightbox() {
    lightBox.appendChild(lbNext);
    lbNext.id = "lbNext";
    lbNext.innerHTML = "&#9654;";
+   lbNext.onclick = showNext;
 
    // design the play button
    lightBox.appendChild(lbPlay);
@@ -60,6 +61,13 @@ function createLightbox() {
       image.src = imgFiles[i];
       image.alt = imgCaptions[i];
       lbImages.appendChild(image);
+   }
+
+   // function to move forward through the image list
+   function showNext() {
+      lbImages.appendChild(lbImages.firstElementChild); // moves first to last
+      (currentImg < imgCount) ? currentImg++ : currentImg = 1; // incrememnts the current image counter, or sets it to 1 if it is at the end
+      lbCounter.textContent = currentImg+ " / " + imgCount; // updates the number
    }
 }
 
