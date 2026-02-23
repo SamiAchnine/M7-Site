@@ -4,8 +4,8 @@
       Chapter Case
 
       Application to generate a slide show
-      Author: Sami Achnine
-      Date: Feb 23 2026
+      Author:
+      Date:
 
       Filename: js05.js
 */
