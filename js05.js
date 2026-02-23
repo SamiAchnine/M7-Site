@@ -51,6 +51,11 @@ function createLightbox() {
    lightBox.appendChild(lbPlay);
    lbPlay.id = "lbPlay";
    lbPlay.innerHTML = "&#9199;";
+   let timeID;
+   lbPlay.onclick = function () {
+      showNext;
+      timeID = window.setInterval(showNext, 1500);
+   }
 
    // design the images container
    lightBox.appendChild(lbImages);
